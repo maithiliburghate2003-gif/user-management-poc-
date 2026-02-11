@@ -1,0 +1,24 @@
+<h2>User Form</h2>
+
+<input placeholder="First Name" [(ngModel)]="user.firstName"><br><br>
+<input placeholder="Last Name" [(ngModel)]="user.lastName"><br><br>
+<input placeholder="Pincode" [(ngModel)]="user.pincode"><br><br>
+
+<button (click)="save()">Save</button>
+
+<hr>
+
+<h2>User List</h2>
+
+<table border="1">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Pincode</th>
+  </tr>
+  <tr *ngFor="let u of users">
+    <td>{{ u.firstName }}</td>
+    <td>{{ u.lastName }}</td>
+    <td>{{ u.pincode }}</td>
+  </tr>
+</table>
